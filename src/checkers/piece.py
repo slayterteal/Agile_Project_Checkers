@@ -1,5 +1,6 @@
 # the player piece on the board
 import pygame
+import os
 
 RED = (255, 0, 0)
 WHITE = (255, 255, 255)
@@ -10,7 +11,9 @@ ROWS, COLS = 8, 8
 SQUARE_SIZE = WIDTH//COLS
 
 #crown image download
-CROWN = pygame.transform.scale(pygame.image.load('src/checkers/checkers_crown.png'), (44,25))
+cwd = os.getcwd()
+cwd = cwd + '\checkers\checkers_crown.png'
+CROWN = pygame.transform.scale(pygame.image.load(cwd), (44,25))
 
 
 class Piece():
