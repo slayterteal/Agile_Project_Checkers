@@ -3,7 +3,7 @@ from .constants import RED, WHITE
 from checkers.board import Board
 
 class Game:
-    def_init_(self, win):
+    def _init_(self, win):
         self._init()
         self.win = win
         
@@ -37,7 +37,7 @@ class Game:
         
     def _move(self, row, col):
         piece = self.board.get_piece(row, col)
-        if(self.selected and piece == 0 and (row, col) in self.valid_moves:
+        if self.selected and piece == 0 and (row, col) in self.valid_moves:
             self.board.move(self.selected, row, col)
             self.change_turn()
         else:
