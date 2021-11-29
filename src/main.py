@@ -1,6 +1,7 @@
 # this is the top level file for the app
 import pygame 
 from checkers.board import Board
+from checkers.game import Game
 
 # size variables
 WIDTH, HEIGHT = 800, 800
@@ -21,7 +22,7 @@ def get_pos_from_mouse(coord):
 def main():
     run = True
     clk = pygame.time.Clock() 
-    board = Board()
+    game = Game(WIN)
 
     while run:
         clk.tick(FPS) 
@@ -32,11 +33,8 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 coord = pygame.mouse.get_pos()
                 row, col = get_pos_from_mouse(coord)
-                selected_piece = board.get_piece(row,col)
-                board.move(selected_piece, 5,5)
 
-        board.draw(WIN)
-        pygame.display.update()
+        game.update()
 
     pygame.QUIT
 
