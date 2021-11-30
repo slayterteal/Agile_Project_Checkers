@@ -3,7 +3,6 @@ import pygame
 import os
 
 #vars
-import os
 WIDTH, HEIGHT = 800, 800
 COLS = 8
 SQUARE_SIZE = WIDTH//COLS
