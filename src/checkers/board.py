@@ -1,17 +1,7 @@
 # The board object for the game
 import pygame
 from .piece import Piece
-
-# Color variables
-RED = (255, 0, 0)
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
-BLUE = (0, 0, 255)
-
-# size variables
-WIDTH, HEIGHT = 800, 800
-ROWS, COLS = 8, 8
-SQUARE_SIZE = WIDTH//COLS # size of the individual square on the board
+from .constants import *
 
 class Board:
     def __init__(self):
