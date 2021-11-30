@@ -23,13 +23,13 @@ class Piece():
 
         self.x = 0 
         self.y = 0
-        self.position()
+        self.positionOfPiece()
 
-    def position(self):
+    def positionOfPiece(self):
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2 # place the piece in the center of the square
         self.y = SQUARE_SIZE * self.row + SQUARE_SIZE // 2
 
-    def make_king(self):
+    def making_king(self):
         self.king = True
     
     def draw(self, window):
@@ -42,7 +42,7 @@ class Piece():
     def move(self, row, col):
         self.row = row
         self.col = col
-        self.position()
+        self.positionOfPiece()
 
     def __repr__(self):
         return str(self.color)

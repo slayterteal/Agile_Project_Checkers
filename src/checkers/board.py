@@ -32,7 +32,7 @@ class Board:
 
         #updates king status
         if row == ROWS -1 or row == 0:
-            piece.make_king()
+            piece.making_king()
             if piece.color == WHITE:
                 self.white_kings += 1
             else:
