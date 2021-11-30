@@ -1,6 +1,13 @@
 import pygame
-from .constants import RED, WHITE, BLUE, SQUARE_SIZE
 from checkers.board import Board
+#vars
+WIDTH= 800
+COLS = 8
+SQUARE_SIZE = WIDTH//COLS
+RED = (255, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
+
 
 class Game:
     def __init__(self, win):

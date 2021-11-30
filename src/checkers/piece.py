@@ -1,7 +1,16 @@
 # the player piece on the board
 import pygame
 import os
-from .constants import *
+
+#vars
+import os
+WIDTH, HEIGHT = 800, 800
+COLS = 8
+SQUARE_SIZE = WIDTH//COLS
+GREY = (128,128,128)
+cwd = os.getcwd()
+cwd = cwd + '\checkers\checkers_crown.png'
+CROWN = pygame.transform.scale(pygame.image.load(cwd), (44,25))
 
 class Piece():
     PADDING = 15

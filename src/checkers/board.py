@@ -1,7 +1,15 @@
 # The board object for the game
 import pygame
 from .piece import Piece
-from .constants import *
+
+#vars
+WIDTH = 800
+ROWS, COLS = 8, 8
+SQUARE_SIZE = WIDTH//COLS
+RED = (255, 0, 0)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+BLUE = (0, 0, 255)
 
 class Board:
     def __init__(self):
@@ -23,7 +31,7 @@ class Board:
         piece.move(row,col)
 
         #updates king status
-        if row == ROWS or row == 0:
+        if row == ROWS -1 or row == 0:
             piece.make_king()
             if piece.color == WHITE:
                 self.white_kings += 1
