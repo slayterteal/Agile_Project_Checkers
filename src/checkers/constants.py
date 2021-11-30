@@ -12,7 +12,7 @@ BLACK = (0, 0, 0)
 BLUE = (0, 0, 255)
 GREY = (128,128,128)
 
-
+#crown image
 cwd = os.getcwd()
 cwd = cwd + '\checkers\checkers_crown.png'
 CROWN = pygame.transform.scale(pygame.image.load(cwd), (44,25))
