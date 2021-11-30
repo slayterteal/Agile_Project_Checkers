@@ -35,3 +35,6 @@ class Piece():
         self.row = row
         self.col = col
         self.position()
+
+    def __repr__(self):
+        return str(self.color)

@@ -1,6 +1,5 @@
 # this is the top level file for the app
 import pygame 
-from checkers.board import Board
 from checkers.game import Game
 
 # size variables
@@ -27,12 +26,17 @@ def main():
     while run:
         clk.tick(FPS) 
 
+        if game.winner() != None:
+            print(game.winner())
+            run = False
+
         for event in pygame.event.get(): # the pygame event loop
             if event.type == pygame.QUIT:
                 run = False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 coord = pygame.mouse.get_pos()
                 row, col = get_pos_from_mouse(coord)
+                game.select(row, col)
 
         game.update()
 
